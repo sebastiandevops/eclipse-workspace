@@ -8,7 +8,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/sebastian/eclipse-workspace/PrimerosPasos"/>
+			<item value="/home/sebastian/estudio/JAVA/PrimerosPasos"/>
+			<item value="/home/sebastian/JAVA/PrimerosPasos"/>
 			<item value="/home/sebastian/estudio/JAVA"/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
