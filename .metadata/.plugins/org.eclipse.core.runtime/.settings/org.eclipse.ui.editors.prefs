@@ -1,4 +1,11 @@
 PHPReadOccurrenceIndicationColor=97,97,97
 PHPWriteOccurrenceIndicationColor=148,133,103
 eclipse.preferences.version=1
+hoverReplaceMode=2
 javaScriptOccurrenceIndicationColor=97,97,97
+net.sf.eclipsecs.error.color=85,54,54
+net.sf.eclipsecs.error.text.style=NONE
+net.sf.eclipsecs.info.text.style=NONE
+net.sf.eclipsecs.warning.color=85,54,54
+net.sf.eclipsecs.warning.text.style=NONE
+spacesForTabs=true

@@ -5,6 +5,17 @@
     <fullyQualifiedTypeName name="poo.DameLaHora"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.io.EOFException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="longitudMailErronea"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="excepciones_I.Calcula"/>
+    <fullyQualifiedTypeName name="excepciones_I.Suma"/>
+    <fullyQualifiedTypeName name="excepciones_I.Multiplica"/>
+    <fullyQualifiedTypeName name="excepciones_I.Divide"/>
 </qualifiedTypeNameHistroy>
