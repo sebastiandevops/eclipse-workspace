@@ -23,8 +23,21 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
     <fullyQualifiedTypeName name="arraylist.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
     <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="clasespropias.Persona"/>
+    <fullyQualifiedTypeName name="arraylist.UsoEmpleado"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+    <fullyQualifiedTypeName name="clasespropias.MisMatrices"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="clasespropias.Jefe"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="clasespropias.Empleado"/>
+    <fullyQualifiedTypeName name="clasespropias.Pareja"/>
+    <fullyQualifiedTypeName name="usothreads.Pelota"/>
+    <fullyQualifiedTypeName name="java.awt.Component"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="usothreads.PelotaHilos"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

@@ -3127,3 +3127,1019 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2021-04-22 10:11:28.098
+!MESSAGE Plug-in 'org.eclipse.egit.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.search.menu' is invalid): org.eclipse.egit.ui.actions.OpenCommitSearchPage
+
+!ENTRY org.eclipse.ui.workbench 4 0 2021-04-22 10:11:28.212
+!MESSAGE Error executing 'org.eclipse.ui.window.customizePerspective': java.lang.NullPointerException
+!STACK 0
+org.eclipse.core.commands.ExecutionException: Error executing 'org.eclipse.ui.window.customizePerspective': java.lang.NullPointerException
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:170)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:389)
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:142)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+Caused by: org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:319)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:253)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	... 34 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.ui.internal.dialogs.cpd.CustomizePerspectiveDialog.getToolbarLabel(CustomizePerspectiveDialog.java:1393)
+	at org.eclipse.ui.internal.dialogs.cpd.CustomizePerspectiveDialog.createTrimBarEntries(CustomizePerspectiveDialog.java:2013)
+	at org.eclipse.ui.internal.dialogs.cpd.CustomizePerspectiveDialog.loadMenuAndToolbarStructure(CustomizePerspectiveDialog.java:1557)
+	at org.eclipse.ui.internal.dialogs.cpd.CustomizePerspectiveDialog.<init>(CustomizePerspectiveDialog.java:539)
+	at org.eclipse.ui.internal.WorkbenchWindow.createCustomizePerspectiveDialog(WorkbenchWindow.java:3155)
+	at org.eclipse.ui.internal.WorkbenchPage.editActionSets(WorkbenchPage.java:1934)
+	at org.eclipse.ui.internal.handlers.EditActionSetsHandler.execute(EditActionSetsHandler.java:38)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at jdk.internal.reflect.GeneratedMethodAccessor61.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 38 more
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.440
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.440
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.441
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.441
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.442
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.442
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.443
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.444
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.444
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.445
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.445
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.446
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.446
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 10:59:33.447
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.commands.SlaveCommandService.unregisterElement(SlaveCommandService.java:245)
+	at org.eclipse.ui.menus.CommandContributionItem.disconnectReferences(CommandContributionItem.java:714)
+	at org.eclipse.ui.menus.CommandContributionItem.handleWidgetDispose(CommandContributionItem.java:645)
+	at org.eclipse.ui.menus.CommandContributionItem.lambda$3(CommandContributionItem.java:758)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1453)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1432)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1244)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.MenuItem.releaseChildren(MenuItem.java:700)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Menu.releaseChildren(Menu.java:982)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:483)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:3405)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1247)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4702)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:533)
+	at org.eclipse.swt.widgets.Shell.dispose(Shell.java:3322)
+	at org.eclipse.swt.widgets.Display.release(Display.java:4621)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:272)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2021-04-22 10:59:34.747 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.10
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data file:/home/sebastian/eclipse-workspace/ -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-04-22 10:59:47.687
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-04-22 10:59:47.687
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d202dc4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71e409f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2021-04-22 13:37:58.528 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.10
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data file:/home/sebastian/eclipse-workspace/ -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-04-22 13:38:06.508
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-04-22 13:38:06.508
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@de40aa1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61b76a7d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-04-22 14:00:53.673
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Font.<init>(Font.java:109)
+	at org.eclipse.buildship.ui.internal.util.font.FontUtils.getDefaultDialogFont(FontUtils.java:34)
+	at org.eclipse.buildship.ui.internal.util.widget.AdvancedOptionsGroup.<init>(AdvancedOptionsGroup.java:59)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.createAdvancedOptionsGroup(GradleProjectSettingsComposite.java:105)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:67)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:38)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite$GradleProjectSettingsCompositeBuilder.build(GradleProjectSettingsComposite.java:253)
+	at org.eclipse.buildship.ui.internal.preferences.GradleWorkbenchPreferencePage.createContents(GradleWorkbenchPreferencePage.java:61)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:244)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1433)
+	at org.eclipse.jface.preference.PreferenceDialog$8.run(PreferenceDialog.java:1196)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1188)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:630)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:660)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:657)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:823)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:820)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1193)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:428)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5067)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4573)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-04-22 14:00:53.674
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Font.<init>(Font.java:109)
+	at org.eclipse.buildship.ui.internal.util.font.FontUtils.getDefaultDialogFont(FontUtils.java:34)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleDistributionGroup.createWidgets(GradleDistributionGroup.java:95)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleDistributionGroup.<init>(GradleDistributionGroup.java:86)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.createGradleDistributionGroup(GradleProjectSettingsComposite.java:100)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:66)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite.<init>(GradleProjectSettingsComposite.java:38)
+	at org.eclipse.buildship.ui.internal.util.widget.GradleProjectSettingsComposite$GradleProjectSettingsCompositeBuilder.build(GradleProjectSettingsComposite.java:253)
+	at org.eclipse.buildship.ui.internal.preferences.GradleWorkbenchPreferencePage.createContents(GradleWorkbenchPreferencePage.java:61)
+	at org.eclipse.jface.preference.PreferencePage.createControl(PreferencePage.java:244)
+	at org.eclipse.jface.preference.PreferenceDialog.createPageControl(PreferenceDialog.java:1433)
+	at org.eclipse.jface.preference.PreferenceDialog$8.run(PreferenceDialog.java:1196)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.preference.PreferenceDialog.showPage(PreferenceDialog.java:1188)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:630)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:660)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:657)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:823)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:820)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1193)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:428)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5067)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4573)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2021-04-22 14:23:53.162 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.10
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data file:/home/sebastian/eclipse-workspace/ -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-04-22 14:23:58.114
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-04-22 14:23:58.114
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61b76a7d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57f89680,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 14:54:50.290
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.genuitec.eclipse.theming.ui.preferences.DevStylePreferencesPage$11.run(DevStylePreferencesPage.java:704)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5941)
+	at com.genuitec.eclipse.theming.ui.preferences.DevStylePreferencesPage.refreshPage(DevStylePreferencesPage.java:700)
+	at com.genuitec.eclipse.theming.ui.preferences.DevStylePreferencesPage.refreshWorkbenchColorCustomizationArea(DevStylePreferencesPage.java:1188)
+	at com.genuitec.eclipse.theming.ui.preferences.DevStylePreferencesPage$12.widgetSelected(DevStylePreferencesPage.java:867)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2021-04-22 14:58:52.645
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction$TextPaster$1.getContents(PasteAction.java:547)
+	at org.eclipse.compare.internal.patch.Utilities.createReader(Utilities.java:86)
+	at org.eclipse.compare.patch.ApplyPatchOperation.internalParsePatch(ApplyPatchOperation.java:205)
+	at org.eclipse.compare.patch.ApplyPatchOperation.isPatch(ApplyPatchOperation.java:92)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction$TextPaster.canPasteOn(PasteAction.java:559)
+	at org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction.run(PasteAction.java:268)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5831)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1427)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5092)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4570)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2021-04-22 15:45:19.200 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.10
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data file:/home/sebastian/eclipse-workspace/ -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2021-04-22 15:45:24.842
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-04-22 15:45:24.842
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4088702d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c24c40a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
